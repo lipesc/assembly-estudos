@@ -1,12 +1,12 @@
 #!/bin/bash
 
-name="hello_proper_exit"
+name="lib_puts"
 
 mkdir -p bin
 
-nasm -felf64 -o bin/${name}.o ${name}.asm
+nasm -felf64 ${name}.asm -o bin/${name}.o 
 
-ld -o bin/${name} bin/${name}.o 
+gcc -no-pie -z noexecstack bin/${name}.o -o bin/${name} 
 
 ./bin/${name}
 

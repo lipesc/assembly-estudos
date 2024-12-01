@@ -13,5 +13,5 @@ _start:
     syscall
 
     mov rax, 60       ; numero da syscall 'exit'       
-    xor rdi, rdi      ; limpar rdi
+    xor rdi, rdi      ; limpar rdi saida  0
     syscall
