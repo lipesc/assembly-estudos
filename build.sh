@@ -1,12 +1,15 @@
 #!/bin/bash
 
-name="lib_puts"
+name="print_call"
 
 mkdir -p bin
 
 nasm -felf64 ${name}.asm -o bin/${name}.o 
 
-gcc -no-pie -z noexecstack bin/${name}.o -o bin/${name} 
+# gcc -no-pie -z noexecstack bin/${name}.o -o bin/${name}
+
+ld -o bin/${name} bin/${name}.o 
+
 
 ./bin/${name}
 
