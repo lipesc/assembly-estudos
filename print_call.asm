@@ -52,6 +52,7 @@ _start:
     mov rdi, 0x1122334455667788
     call print_hex
     call print_newline
+    call print_newline
 
 
     mov rax, 60
